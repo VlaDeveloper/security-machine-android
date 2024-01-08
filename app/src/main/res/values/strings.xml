@@ -2,12 +2,20 @@
     <string name="app_name">Security Machine App</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">АСУБП</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Главная</string>
+    <string name="menu_analysis">Анализ</string>
+    <string name="menu_param">Параметры</string>
+    <string name="menu_state">Состояние</string>
+    <string name="menu_watch">Просмотр</string>
+    <string name="menu_error">Ошибки</string>
+    <string name="menu_ref">Справка</string>
+
+<!--    <string name="menu_gallery">Gallery</string>-->
+<!--    <string name="menu_slideshow">Slideshow</string>-->
+<!--    <string name="menu_logout">Logout</string>-->
 </resources>

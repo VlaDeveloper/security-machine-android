@@ -1,25 +1,23 @@
-package com.vlad.securitymachineapp.ui.home;
+package com.vlad.securitymachineapp.ui.state;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.vlad.securitymachineapp.databinding.FragmentHomeBinding;
+import com.vlad.securitymachineapp.databinding.FragmentStateBinding;
 
-public class HomeFragment extends Fragment {
+public class StateFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentStateBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentStateBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
     }
