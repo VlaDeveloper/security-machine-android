@@ -36,11 +36,12 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="68dp"
         android:layout_weight="1"
         android:background="@android:color/transparent"
         android:contentDescription="@string/app_name"
         android:onClick="closeDrawer"
+        android:paddingTop="@dimen/nav_header_vertical_spacing_extra"
         android:scaleType="fitStart"
         android:src="@drawable/baseline_arrow_back_24" />
 

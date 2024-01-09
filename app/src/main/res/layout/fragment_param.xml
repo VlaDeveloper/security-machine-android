@@ -1,16 +1,416 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Мы на параметрах"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".ui.home.HomeFragment">
+
+        <RelativeLayout
+            android:id="@+id/secDimension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            >
+
+
+            <TextView
+                android:id="@+id/secDimTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/param_dim"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/par1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secDimTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-45dp"
+                android:src="@drawable/par1" />
+
+            <TextView
+                android:id="@+id/secWidthTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secDimTitle"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_width"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secWidthTitle"
+                android:ems="10"
+                android:hint="@string/param_width_hint"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/secHeightTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editWidth"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_height"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secHeightTitle"
+                android:ems="10"
+                android:hint="@string/param_height_hint"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_below="@id/secDimension"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            >
+
+
+            <TextView
+                android:id="@+id/secSelectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/param_sel"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/par2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSelectionTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-45dp"
+                android:src="@drawable/par2" />
+
+            <TextView
+                android:id="@+id/secLearnTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSelectionTitle"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_learn"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editLearn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secLearnTitle"
+                android:ems="10"
+                android:hint="@string/param_learn_hint"
+                android:inputType="textUri"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/secTestTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editLearn"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_test"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secTestTitle"
+                android:ems="10"
+                android:hint="@string/param_learn_hint"
+                android:inputType="textUri"
+                android:minHeight="48dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secLayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_below="@id/secSelection"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            >
+
+
+            <TextView
+                android:id="@+id/secLayerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/param_lay"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/par3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secLayerTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-45dp"
+                android:src="@drawable/par3" />
+
+            <TextView
+                android:id="@+id/secInTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secLayerTitle"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_in"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secInTitle"
+                android:ems="10"
+                android:hint="@string/param_layer_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/secEduTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editIn"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_edu"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editEdu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secEduTitle"
+                android:ems="10"
+                android:hint="@string/param_layer_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/secLinkTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editEdu"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_link"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secLinkTitle"
+                android:ems="10"
+                android:hint="@string/param_layer_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/secOutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editLink"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_out"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secOutTitle"
+                android:ems="10"
+                android:hint="@string/param_layer_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secInstruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_below="@+id/secLayer"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            >
+
+
+            <TextView
+                android:id="@+id/secInstrTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/param_dim"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/par4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secInstrTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-45dp"
+                android:src="@drawable/par4" />
+
+            <TextView
+                android:id="@+id/secInstr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secInstrTitle"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_first"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editInstr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secInstr1"
+                android:ems="10"
+                android:hint="@string/param_instruction_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:id="@+id/secInstr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editInstr1"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/param_second"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:textColor="@color/text"
+                android:textSize="17sp"
+                />
+
+            <EditText
+                android:id="@+id/editInstr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secInstr2"
+                android:ems="10"
+                android:hint="@string/param_instruction_hint"
+                android:inputType="text"
+                android:minHeight="48dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/param_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secInstruction"
+            android:text="@string/param_btn_reset"
+            android:paddingHorizontal="@dimen/sec_btn_padding_horizontal"
+            android:paddingVertical="@dimen/sec_btn_padding_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/reset"
+            />
+
+        <Button
+            android:id="@+id/param_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/param_reset"
+            android:text="@string/param_btn_apply"
+            android:paddingHorizontal="@dimen/sec_btn_padding_horizontal"
+            android:paddingVertical="@dimen/sec_btn_padding_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

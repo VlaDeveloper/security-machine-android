@@ -1,16 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Мы на анализе"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".ui.home.HomeFragment">
+
+        <RelativeLayout
+            android:id="@+id/secCorrect1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            >
+
+
+            <TextView
+                android:id="@+id/secAnalysisTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/analysis_correct"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/stanokCorrect1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secAnalysisTitle"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stanok" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/secError1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            android:layout_below="@+id/secCorrect1"
+            >
+
+
+            <TextView
+                android:id="@+id/secErrorTitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/analysis_error"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/stanokError1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secErrorTitle1"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stanok" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/analysis_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secError1"
+            android:text="@string/analysis_btn"
+            android:paddingHorizontal="@dimen/sec_btn_padding_horizontal"
+            android:paddingVertical="@dimen/sec_btn_padding_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,18 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Мы на главной"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:context=".ui.home.HomeFragment">
+
+        <RelativeLayout
+            android:id="@+id/secCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            >
+
+
+            <TextView
+                android:id="@+id/secCameraTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/home_camera"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/stanok1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secCameraTitle"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stanok" />
+
+            <TextView
+                android:id="@+id/secStanokTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stanok1"
+                android:layout_marginTop="@dimen/sec_title_margin"
+
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/home_stanok"
+                android:textAlignment="center"
+                android:textColor="@color/text" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secStat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            android:layout_below="@id/secCamera"
+            >
+
+
+            <TextView
+                android:id="@+id/secStatTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/home_stat"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/stat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secStatTitle"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/stat_transparent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_marginTop="@dimen/sec_vertical_margin"
+            android:layout_marginHorizontal="@dimen/sec_horizontal_margin"
+            android:layout_below="@id/secStat"
+            >
+
+
+            <TextView
+                android:id="@+id/secSettingsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sec_title_margin"
+                android:layout_marginBottom="@dimen/sec_title_margin_down"
+                android:fontFamily="@font/open_sans_bold"
+                android:text="@string/home_settings"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/secSet1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSettingsTitle"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="@dimen/sec_cog_margin"
+                    android:src="@drawable/cog" />
+
+                <TextView
+                    android:id="@+id/secSettings1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sec_title_margin_down"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/home_settings1"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secSet2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSet1"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="@dimen/sec_cog_margin"
+                    android:src="@drawable/cog" />
+
+                <TextView
+                    android:id="@+id/secSettings2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sec_title_margin"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/home_settings2"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secSet3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSet2"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="@dimen/sec_cog_margin"
+                    android:src="@drawable/cog" />
+
+                <TextView
+                    android:id="@+id/secSettings3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sec_title_margin"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/home_settings3"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secSet4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSet3"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="@dimen/sec_cog_margin"
+                    android:src="@drawable/cog" />
+
+                <TextView
+                    android:id="@+id/secSettings4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sec_title_margin"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/home_settings4"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secSet5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSet4"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="@dimen/sec_cog_margin"
+                    android:src="@drawable/cog" />
+
+                <TextView
+                    android:id="@+id/secSettings5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/sec_title_margin"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/home_settings5"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secSet5"
+                android:text="@string/home_settings_btn"
+                android:paddingHorizontal="@dimen/sec_btn_padding_horizontal"
+                android:paddingVertical="@dimen/sec_btn_padding_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+

@@ -5,7 +5,7 @@
     <string name="nav_header_title">АСУБП</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Настройки</string>
 
     <string name="menu_home">Главная</string>
     <string name="menu_analysis">Анализ</string>
@@ -14,6 +14,63 @@
     <string name="menu_watch">Просмотр</string>
     <string name="menu_error">Ошибки</string>
     <string name="menu_ref">Справка</string>
+
+    <string name="home_camera">Камера</string>
+    <string name="home_stanok">Станок</string>
+    <string name="home_stat">Статистика</string>
+    <string name="home_settings">Настройки</string>
+
+    <string name="home_settings1">Разрешение</string>
+    <string name="home_settings2">Слои</string>
+    <string name="home_settings3">Обучение</string>
+    <string name="home_settings4">Сброс</string>
+    <string name="home_settings5">Инструкция</string>
+    <string name="home_settings_btn">Открыть</string>
+
+    <string name="analysis_correct">Корректная работа</string>
+    <string name="analysis_error">Ошибки</string>
+    <string name="analysis_btn">Обновить</string>
+
+    <string name="error_work">Рабочее место</string>
+    <string name="error_stanok">Станок</string>
+    <string name="error_time">Ошибка времени</string>
+    <string name="error_act">Ошибка срабатывания</string>
+    <string name="error_detect">Ошибка обнаружения</string>
+    <string name="error_btn">Ещё</string>
+
+    <string name="param_dim">Разрешение</string>
+    <string name="param_sel">Выборки</string>
+    <string name="param_lay">Слои</string>
+    <string name="param_instr">Инструкции</string>
+
+    <string name="param_width">Ширина</string>
+    <string name="param_width_hint">Введите ширину…</string>
+    <string name="param_height">Высота</string>
+    <string name="param_height_hint">Введите высоту…</string>
+
+    <string name="param_learn">Обучающая</string>
+    <string name="param_learn_hint">Выберите выборку…</string>
+    <string name="param_test">Тестовая</string>
+
+    <string name="param_in">Входной</string>
+    <string name="param_layer_hint">Введите слой…</string>
+    <string name="param_edu">Обучаемый</string>
+    <string name="param_link">Связующий</string>
+    <string name="param_out">Выходной</string>
+
+    <string name="param_first">Первая</string>
+    <string name="param_second">Вторая</string>
+    <string name="param_instruction_hint">Введите инструкцию…</string>
+
+    <string name="param_btn_reset">Сбросить</string>
+    <string name="param_btn_apply">Применить</string>
+
+    <string name="current_state">Текущее состояние:</string>
+    <string name="state_wait">Ожидание…</string>
+
+    <string name="watch_dimension">Разрешение: 609x420</string>
+    <string name="watch_hint">Введите количество пикселей…</string>
+    <string name="watch_btn">Настроить</string>
 
 <!--    <string name="menu_gallery">Gallery</string>-->
 <!--    <string name="menu_slideshow">Slideshow</string>-->
